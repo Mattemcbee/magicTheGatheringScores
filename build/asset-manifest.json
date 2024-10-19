@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a0a5a51e.css",
+    "main.js": "/static/js/main.31f674f0.js",
+    "static/media/dragon.png": "/static/media/dragon.4e73f73a82c5f113fbdf.png",
+    "static/media/land.png": "/static/media/land.4e08869531d5555222fc.png",
+    "static/media/sauronblank.png": "/static/media/sauronblank.fc904722457301bb7247.png",
+    "index.html": "/index.html",
+    "main.a0a5a51e.css.map": "/static/css/main.a0a5a51e.css.map",
+    "main.31f674f0.js.map": "/static/js/main.31f674f0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a0a5a51e.css",
+    "static/js/main.31f674f0.js"
+  ]
+}
