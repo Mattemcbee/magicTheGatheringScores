@@ -1,6 +1,10 @@
 import Sauron from '../Pics/sauronblank.png'
 import Land from '../Pics/land.png'
 import Dragon from '../Pics/dragon.png'
+import Treasure from '../Pics/bug.png'
+import Black from '../Pics/black.png'
+import Vamp from '../Pics/vamp2.png'
+
 
 export const PLAYERS = [
   {
@@ -16,6 +20,14 @@ export const PLAYERS = [
 
     ],
      killedBy: [
+      {
+        killerName:'Clay',
+        commander:Sauron
+      },
+      {
+        killerName:'Andrew',
+        commander:Sauron
+      },
     ],
     get kills() {
       return this.kMatt + this.kPavle + this.kAndrew + this.kWill + this.kClay;
@@ -35,6 +47,10 @@ export const PLAYERS = [
 
     ],
      killedBy: [
+      {
+        killerName:'Nick',
+        commander:Vamp
+      },
     ],
     get kills() {
       return this.kNick + this.kPavle + this.kAndrew + this.kWill + this.kClay;
@@ -50,8 +66,14 @@ export const PLAYERS = [
     kWill: 0,
     kClay: 0,
     winStats: [
+      {image: Black},
+
     ],
      killedBy: [
+      {
+        killerName:'Matt',
+        commander:Black
+      },
     ],
 
     get kills() {
@@ -103,8 +125,26 @@ winStats: [
     kWill: 0,
     kNick: 5,
 winStats: [
+  {image: Treasure},
+  {image: Treasure},
+
+
     ],
      killedBy: [
+      {
+        killerName:'Matt',
+        commander:Treasure
+      },
+      {
+        killerName:'Andrew',
+        commander:Treasure
+      },{
+        killerName:'Nick',
+        commander:Treasure
+      },{
+        killerName:'Pavle',
+        commander:Treasure
+      },
     ],
     get kills() {
       return this.kMatt + this.kPavle + this.kAndrew + this.kWill + this.kNick;

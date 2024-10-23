@@ -8,10 +8,13 @@ const DisplayRankings = () => {
   const [openWinContainers, setOpenWinContainers] = useState({}); // Track which containers are open
 
   // Sort players by wins
+  
   const orderedList = [...PLAYERS].sort(
-    (a, b) => b.winStats.length - a.winStats.length
+    (a, b) => (b.winStats.length +b.killedBy.length/10) - (a.winStats.length +a.killedBy.length/10)
   );
-
+  const maxWins = Math.max(...PLAYERS.map(player => player.winStats.length));
+  console.log(maxWins);
+  
   // Function to toggle specific player's container
   // Function to toggle specific player's Kills container and close others
   const toggleContainer = playerName => {
@@ -124,7 +127,7 @@ const DisplayRankings = () => {
         <Container
           fluid
           key={player.name}
-          className={`clickable-container ${index === 0 ? 'backgroundCardFirst' : 'backgroundCard'
+          className={`clickable-container ${player.winStats.length === maxWins ? 'backgroundCardFirst' : 'backgroundCard'
             }`}
         >
           <Row>
@@ -161,10 +164,10 @@ const DisplayRankings = () => {
                   {player.killedBy.map((entry, index) => (
                     <div key={index} className='killText'>
                       <h1 key={index} className='killText'>
-                        {entry.killerName} {entry.commander}
+                        {entry.killerName}
                       </h1>
                       <img
-                        src={entry.image}
+                        src={entry.commander}    
                         alt={entry.commander}
                         style={{ height: '20px' }}
                       />
@@ -218,16 +221,16 @@ const DisplayRankings = () => {
           </h3>
         </div>
       )}
-      <Container
-  fluid
-  className='backgroundCard'
-  style={{marginTop:'30px'}}
+     {/* <Container
+  fluid className='backgroundCard' style={{marginTop:'30px'}}
 >
-<h1 className='nameText'>Elaborate Score Sheet TBD</h1>
+<h1 className='nameText'>Elaborate Score Sheet TBD</h1>*/}
+{/* 
   {orderedList.map((player, index) => (
     <h1 className='killText' key={index}>{player.name} {player.winStats.length * 3 + player.killedBy.length}</h1>
   ))}
-</Container>
+    */}
+{/*</Container>*/}
 
             </Container>
 
