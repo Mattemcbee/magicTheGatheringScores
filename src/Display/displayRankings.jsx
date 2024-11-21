@@ -161,8 +161,9 @@ const DisplayRankings = () => {
               {player.killedBy && player.killedBy.length > 0 && (
                 <div className='killText'>
                   <h1 className='killText'></h1>
+                  <Row>
                   {player.killedBy.map((entry, index) => (
-                    <div key={index} className='killText'>
+                    <Col xs='4' key={index} className='killText'>
                       <h1 key={index} className='killText'>
                         {entry.killerName}
                       </h1>
@@ -171,8 +172,9 @@ const DisplayRankings = () => {
                         alt={entry.commander}
                         style={{ height: '20px' }}
                       />
-                    </div>
+                    </Col>
                   ))}
+                  </Row>
                 </div>
               )}
               {player.killedBy && player.killedBy.length === 0 && (
