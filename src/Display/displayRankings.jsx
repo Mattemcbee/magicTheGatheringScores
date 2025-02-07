@@ -117,10 +117,6 @@ const DisplayRankings = () => {
 
   return (
     <Container fluid style={{paddingBottom: '40px'}}>
-      <Container className='text-center'>
-        <h1 className='titleText metal-mania-regular'>GAGIC</h1>
-        <h1 className='titleTextSmall metal-mania-regular'>The Mathering</h1>
-      </Container>
 
       {/* Display the top-ranked player */}
       {orderedList.map((player, index) => (

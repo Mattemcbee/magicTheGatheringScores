@@ -178,7 +178,7 @@ const FetchCardNames = () => {
                     </Container>
                 )
             )}
-
+            
             <MyTable
                 myTable={userTables[currentUser]}
                 openModal={openModal}
